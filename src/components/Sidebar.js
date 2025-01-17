@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { Home, Settings, Users, Mail, Menu, FileJson } from "lucide-react";
+import { Home, Settings, Users, Mail, Menu, FileJson, QrCode } from "lucide-react";
 import Link from 'next/link';
 
 export default function Sidebar() {
@@ -15,6 +15,7 @@ export default function Sidebar() {
   const menuItems = [
     /* { icon: <Home className="w-4 h-4 mr-2" />, label: '홈', href: '/' }, */
     { icon: <FileJson className="w-4 h-4 mr-2" />, label: 'JSON 에디터', href: '/json-editor' },
+    { icon: <QrCode className="w-4 h-4 mr-2" />, label: 'QR 코드 생성기', href: '/qr-generator' },
     /* { icon: <Users className="w-4 h-4 mr-2" />, label: '사용자', href: '/users' },
     { icon: <Mail className="w-4 h-4 mr-2" />, label: '메시지', href: '/messages' },
     { icon: <Settings className="w-4 h-4 mr-2" />, label: '설정', href: '/settings' }, */
