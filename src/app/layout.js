@@ -48,6 +48,7 @@ export default function RootLayout({ children }) {
             className={`
               flex-1 relative transition-all duration-300 ease-in-out
               ${sidebarOpen ? 'lg:w-[calc(100%-16rem)]' : 'lg:w-full'}
+              mt-8 ml-8
             `}
           >
             {children}
