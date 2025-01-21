@@ -56,7 +56,7 @@ export default function JsonEditorPage() {
 
   return (
     <div className="h-[calc(100vh-2rem)] p-4 lg:ml-0 max-w-full overflow-x-hidden">
-      <h1 className="text-2xl font-bold mb-4 pl-8 lg:pl-0">JSON 에디터</h1>
+      <h1 className="text-2xl font-bold mb-4 pl-8 lg:pl-0">JSON Editor</h1>
 
       <div className="flex flex-col lg:flex-row gap-4 h-[calc(100%-4rem)]">
         {/* 왼쪽: JSON 폼 */}
