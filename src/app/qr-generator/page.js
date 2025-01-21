@@ -230,7 +230,7 @@ export default function QRGeneratorPage() {
 
   return (
     <div className="h-[calc(100vh-2rem)] p-4 lg:ml-0">
-      <h1 className="text-2xl font-bold mb-4 pl-8 lg:pl-0">QR 코드 생성기</h1>
+      <h1 className="text-2xl font-bold mb-4 pl-8 lg:pl-0">URL QR Code Generator</h1>
 
       <div className="space-y-4">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
@@ -250,18 +250,18 @@ export default function QRGeneratorPage() {
               value={size}
               onChange={handleSizeChange}
               className="w-24"
-              placeholder="크기(px)"
+              placeholder="Size(px)"
             />
             <span className="text-sm text-muted-foreground">px</span>
           </div>
           <Button onClick={handleGenerate}>
-            생성
+            Generate
           </Button>
         </div>
 
         <div className="flex flex-wrap gap-4 items-center">
           <div className="flex items-center gap-2">
-            <label className="text-sm">QR 코드 색상:</label>
+            <label className="text-sm">QR Code Color:</label>
             <input
               type="color"
               value={fgColor}
@@ -270,7 +270,7 @@ export default function QRGeneratorPage() {
             />
           </div>
           <div className="flex items-center gap-2">
-            <label className="text-sm">배경 색상:</label>
+            <label className="text-sm">Background Color:</label>
             <input
               type="color"
               value={bgColor}
@@ -287,7 +287,7 @@ export default function QRGeneratorPage() {
                 className="gap-2"
               >
                 <Smile className="w-4 h-4" />
-                이모지 {selectedEmoji ? selectedEmoji.emoji : '선택'}
+                Emoji {selectedEmoji ? selectedEmoji.emoji : 'Select'}
               </Button>
               {showEmojiPicker && (
                 <div className="absolute z-50 mt-1">
@@ -308,7 +308,7 @@ export default function QRGeneratorPage() {
                   value={emojiSize}
                   onChange={handleEmojiSizeChange}
                   className="w-20"
-                  placeholder="크기"
+                  placeholder="Size"
                 />
                 <Button
                   variant="ghost"
@@ -322,7 +322,7 @@ export default function QRGeneratorPage() {
             )}
           </div>
           <div className="flex items-center gap-2">
-            <label className="text-sm">테두리:</label>
+            <label className="text-sm">Border:</label>
             <Input
               type="number"
               min="0"
@@ -330,7 +330,7 @@ export default function QRGeneratorPage() {
               value={borderWidth}
               onChange={handleBorderWidthChange}
               className="w-20"
-              placeholder="두께"
+              placeholder="width"
             />
             <input
               type="color"
@@ -340,7 +340,7 @@ export default function QRGeneratorPage() {
             />
           </div>
           <div className="flex items-center gap-2">
-            <label className="text-sm">패딩:</label>
+            <label className="text-sm">Padding:</label>
             <Input
               type="number"
               min="0"
@@ -348,7 +348,7 @@ export default function QRGeneratorPage() {
               value={padding}
               onChange={handlePaddingChange}
               className="w-20"
-              placeholder="패딩"
+              placeholder="Padding"
             />
           </div>
         </div>
