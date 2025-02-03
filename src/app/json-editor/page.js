@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { IndentIcon, AlignJustify, ArrowLeft, ArrowRight } from "lucide-react";
 import { useTheme } from "next-themes";
 import JsonForm from '@/components/JsonForm';
+import AdBanner from '@/components/AdBanner';
 
 export default function JsonEditorPage() {
   const [jsonText, setJsonText] = useState('{\n  "hello": "world"\n}');
@@ -55,10 +56,10 @@ export default function JsonEditorPage() {
   };
 
   return (
-    <div className="h-[calc(100vh-2rem)] p-4 lg:ml-0 max-w-full overflow-x-hidden">
+    <div className="h-[calc(100vh-2rem)] p-4 lg:ml-0 max-w-full overflow-x-hidden flex flex-col">
       <h1 className="text-2xl font-bold mb-4 pl-8 lg:pl-0">JSON Editor</h1>
 
-      <div className="flex flex-col lg:flex-row gap-4 h-[calc(100%-4rem)]">
+      <div className="flex flex-col lg:flex-row gap-4 flex-grow min-h-0">
         {/* 왼쪽: JSON 폼 */}
         <div className="flex-1 min-w-0 border rounded-lg shadow-sm h-full min-h-[400px] overflow-auto">
           <div className="bg-muted p-2 border-b flex items-right justify-end">
@@ -126,6 +127,11 @@ export default function JsonEditorPage() {
             />
           </div>
         </div>
+      </div>
+
+      {/* 광고 영역 */}
+      <div className="mt-8 w-full">
+        <AdBanner />
       </div>
     </div>
   );

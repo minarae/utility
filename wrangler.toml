@@ -1,0 +1,5 @@
+name = "utility_frontend"
+compatibility_date = "2025-01-24"
+
+[site]
+bucket = "./out"
